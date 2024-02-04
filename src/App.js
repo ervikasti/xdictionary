@@ -15,12 +15,12 @@ function App() {
   
 
   const[text,setText] = useState('');
-  const[isFound,setIsFound] = useState(false);
+  // const[isFound,setIsFound] = useState(false);
   const[meaning,setMeaning] = useState('');
   
   const handleChange  = (e) => {
     setText(e.target.value);
-    setIsFound(false);
+    // setIsFound(false);
     setMeaning('');
   } 
 
@@ -34,11 +34,11 @@ function App() {
           }
       }
       if(!val){
-        setIsFound(true);
+        setMeaning('Word not found in the dictionary.');
       }
 
     }else{
-      setIsFound(true);
+      setMeaning('Word not found in the dictionary.');
     }
   }
 
@@ -49,10 +49,9 @@ function App() {
       <button onClick={handleClick}>Search</button>
       <p>Definition:</p>
       <p>{meaning}</p>
-      {isFound?<p>Word not found in the dictionary.</p>:null}
-
     </div>
   );
 }
+// {/* {isFound?<p>Word not found in the dictionary.</p>:null} */}
 
 export default App;
