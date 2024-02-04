@@ -37,6 +37,8 @@ function App() {
         setIsFound(true);
       }
 
+    }else{
+      setIsFound(true);
     }
   }
 
