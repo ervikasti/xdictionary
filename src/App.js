@@ -47,7 +47,7 @@ function App() {
       <h2>Dictionary App</h2>
       <input type='text' value={text} onChange={handleChange}/>
       <button onClick={handleClick}>Search</button>
-      <p><b>Definition:</b></p>
+      <p>Definition:</p>
       <p>{meaning}</p>
       {isFound?<p>Word not found in the dictionary.</p>:null}
 
